@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Exploring Math and Code | Noah Rossi</title>
+        <link rel="stylesheet" href="/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"],
+                        ["\\(", "\\)"],
+                    ],
+                    displayMath: [
+                        ["$$", "$$"],
+                        ["\\[", "\\]"],
+                    ],
+                },
+            };
+        </script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        ></script>
+    </head>
+
+    <body>
+        <div class="site-wrapper">
+            <header class="header">
+                <a href="/" class="logo">Noah Rossi</a>
+                <nav class="nav">
+                    <a href="/blog">Blog</a>
+                </nav>
+            </header>
+
+            <main class="main">
+<article class="blog-post">
+    <header class="post-header">
+        <h1 class="post-title">Exploring Math and Code</h1>
+        
+        <time class="post-date" datetime="2024-01-15">
+            January 15, 2024
+        </time>
+         
+        <p class="post-description">A demonstration of mathematical notation and code syntax highlighting</p>
+        
+    </header>
+
+    <div class="post-content"><p>One of the great things about having a technical blog is being able to write about both mathematics and programming. Let me demonstrate both!</p>
+<h2 id="the-beauty-of-mathematics">The Beauty of Mathematics</h2>
+<p>Mathematics is the language of the universe. Let's start with something simple—the quadratic formula. For any equation of the form $ax^2 + bx + c = 0$, the solutions are:</p>
+<p>$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</p>
+<h3 id="euler-s-identity">Euler's Identity</h3>
+<p>Perhaps the most beautiful equation in mathematics is Euler's identity:</p>
+<p>$$e^{i\pi} + 1 = 0$$</p>
+<p>This single equation connects five fundamental mathematical constants: $e$, $i$, $\pi$, $1$, and $0$.</p>
+<h3 id="calculus">Calculus</h3>
+<p>The fundamental theorem of calculus relates differentiation and integration:</p>
+<p>$$\frac{d}{dx}\int_a^x f(t),dt = f(x)$$</p>
+<p>And here's the Gaussian integral, which appears frequently in probability and statistics:</p>
+<p>$$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$</p>
+<h2 id="code-examples">Code Examples</h2>
+<p>Now let's look at some code. Here's a Python function that implements the quadratic formula:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>math
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">quadratic_formula</span><span>(</span><span style="color:#bf616a;">a</span><span>: float, </span><span style="color:#bf616a;">b</span><span>: float, </span><span style="color:#bf616a;">c</span><span>: float) -&gt; tuple[float, float]:
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Solve ax^2 + bx + c = 0 using the quadratic formula.
+</span><span style="color:#65737e;">    Returns both solutions as a tuple.
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    discriminant = b**</span><span style="color:#d08770;">2 </span><span>- </span><span style="color:#d08770;">4</span><span>*a*c
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">if </span><span>discriminant &lt; </span><span style="color:#d08770;">0</span><span>:
+</span><span>        </span><span style="color:#b48ead;">raise </span><span style="color:#bf616a;">ValueError</span><span>(&quot;</span><span style="color:#a3be8c;">No real solutions exist</span><span>&quot;)
+</span><span>    
+</span><span>    sqrt_discriminant = math.</span><span style="color:#bf616a;">sqrt</span><span>(discriminant)
+</span><span>    x1 = (-b + sqrt_discriminant) / (</span><span style="color:#d08770;">2 </span><span>* a)
+</span><span>    x2 = (-b - sqrt_discriminant) / (</span><span style="color:#d08770;">2 </span><span>* a)
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">return </span><span>x1, x2
+</span><span>
+</span><span style="color:#65737e;"># Example usage
+</span><span>solutions = </span><span style="color:#bf616a;">quadratic_formula</span><span>(</span><span style="color:#d08770;">1</span><span>, -</span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>)
+</span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">Solutions: x = </span><span>{solutions[</span><span style="color:#d08770;">0</span><span>]}</span><span style="color:#a3be8c;"> and x = </span><span>{solutions[</span><span style="color:#d08770;">1</span><span>]}&quot;)
+</span></code></pre>
+<h3 id="numerical-integration-in-rust">Numerical Integration in Rust</h3>
+<p>Here's a more complex example—numerical integration using Simpson's rule in Rust:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">simpsons_rule</span><span>&lt;F&gt;(</span><span style="color:#bf616a;">f</span><span>: F, </span><span style="color:#bf616a;">a</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">b</span><span>: </span><span style="color:#b48ead;">f64</span><span>, </span><span style="color:#bf616a;">n</span><span>: </span><span style="color:#b48ead;">usize</span><span>) -&gt; </span><span style="color:#b48ead;">f64
+</span><span style="color:#b48ead;">where
+</span><span>    F: Fn(</span><span style="color:#b48ead;">f64</span><span>) -&gt; </span><span style="color:#b48ead;">f64</span><span>,
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> n = </span><span style="color:#b48ead;">if</span><span> n % </span><span style="color:#d08770;">2 </span><span>== </span><span style="color:#d08770;">1 </span><span>{ n + </span><span style="color:#d08770;">1 </span><span>} </span><span style="color:#b48ead;">else </span><span>{ n };
+</span><span>    </span><span style="color:#b48ead;">let</span><span> h = (b - a) / n as </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> sum = </span><span style="color:#96b5b4;">f</span><span>(a) + </span><span style="color:#96b5b4;">f</span><span>(b);
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">1</span><span>..n {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = a + i as </span><span style="color:#b48ead;">f64 </span><span>* h;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> coefficient = </span><span style="color:#b48ead;">if</span><span> i % </span><span style="color:#d08770;">2 </span><span>== </span><span style="color:#d08770;">0 </span><span>{ </span><span style="color:#d08770;">2.0 </span><span>} </span><span style="color:#b48ead;">else </span><span>{ </span><span style="color:#d08770;">4.0 </span><span>};
+</span><span>        sum += coefficient * </span><span style="color:#96b5b4;">f</span><span>(x);
+</span><span>    }
+</span><span>    
+</span><span>    sum * h / </span><span style="color:#d08770;">3.0
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#65737e;">// Approximate the Gaussian integral from -5 to 5
+</span><span>    </span><span style="color:#b48ead;">let</span><span> result = </span><span style="color:#96b5b4;">simpsons_rule</span><span>(|</span><span style="color:#bf616a;">x</span><span>| (-x * x).</span><span style="color:#96b5b4;">exp</span><span>(), -</span><span style="color:#d08770;">5.0</span><span>, </span><span style="color:#d08770;">5.0</span><span>, </span><span style="color:#d08770;">1000</span><span>);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Approximation of Gaussian integral: {:.10}</span><span>&quot;, result);
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Expected (√π): {:.10}</span><span>&quot;, std::f64::consts::</span><span style="color:#d08770;">PI</span><span>.</span><span style="color:#96b5b4;">sqrt</span><span>());
+</span><span>}
+</span></code></pre>
+<h2 id="combining-math-and-code">Combining Math and Code</h2>
+<p>The interplay between mathematical theory and implementation is fascinating. When we write $O(n \log n)$ for an algorithm's complexity, we're using mathematical notation to describe computational behavior.</p>
+<p>Consider the sum of the first $n$ natural numbers:</p>
+<p>$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$</p>
+<p>We can verify this with code:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">sum_formula</span><span>(</span><span style="color:#bf616a;">n</span><span>: int) -&gt; int:
+</span><span>    </span><span style="color:#b48ead;">return </span><span>n * (n + </span><span style="color:#d08770;">1</span><span>) // </span><span style="color:#d08770;">2
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">sum_loop</span><span>(</span><span style="color:#bf616a;">n</span><span>: int) -&gt; int:
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#96b5b4;">sum</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">1</span><span>, n + </span><span style="color:#d08770;">1</span><span>))
+</span><span>
+</span><span style="color:#65737e;"># Both should give the same result
+</span><span>n = </span><span style="color:#d08770;">100
+</span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">Formula: </span><span>{</span><span style="color:#bf616a;">sum_formula</span><span>(n)}&quot;)
+</span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">Loop: </span><span>{</span><span style="color:#bf616a;">sum_loop</span><span>(n)}&quot;)
+</span></code></pre>
+<p>This is just the beginning of what we can explore with math and code together!</p>
+</div>
+
+    <footer class="post-footer">
+        <a href="/blog" class="back-link">&larr; Back to all posts</a>
+    </footer>
+</article>
+</main>
+
+            <footer class="footer">
+                <div class="social-links">
+                    <a href="mailto:noah@noahrossi.com" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a
+                        href="https://github.com/noahrossi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/noahrossi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

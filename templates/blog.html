@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Blog | Noah Rossi{% endblock title %}
+{% block content %}
+<div class="blog-header">
+    <h1>Blog</h1>
+    <!--<p class="blog-description">Software, mathematics, and maybe more.</p>-->
+    <p class="blog-description">More coming soon!</p>
+</div>
+
+<div class="blog-list">
+    {% for page in section.pages %}
+    <article class="blog-post-preview">
+        <a href="{{ page.permalink | safe }}" class="post-link">
+            <h2 class="post-title">{{ page.title }}</h2>
+        </a>
+        <time class="post-date" datetime="{{ page.date }}">
+            {{ page.date | date(format="%B %e, %Y") }}
+        </time>
+        {% if page.description %}
+        <p class="post-description">{{ page.description }}</p>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+{% endblock content %}
