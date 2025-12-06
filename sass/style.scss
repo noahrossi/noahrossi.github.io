@@ -84,11 +84,10 @@ body {
 
   img {
     width: 100%;
-    height: auto;
+    height: 200px;
     display: block;
     border-radius: 4px;
     object-fit: cover;
-    max-height: 400px;
   }
 
   // Placeholder styling when no image
