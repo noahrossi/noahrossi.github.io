@@ -25,7 +25,19 @@ algebra. Thus, we can have at most $d$ mutually orthogonal vectors
 in $\mathbb{R}^d$.
 
 ## What does _nearly orthogonal_ mean?
-I used the term "nearly-orthogonal" earlier without defining it. Let's define two vectors $x$ and
+I used the term "nearly-orthogonal" earlier without defining it.
+
+Let's define two vectors $x$ and $y$ as nearly orthogonal for a particular value of $\epsilon$ if
+
+$$
+\frac{x \cdot y}{\Vert x \Vert \Vert y \Vert} < \epsilon.
+$$
+
+This is equivalent to saying that the angle $\theta$ between $x$ and $y$ satisfies
+$\cos \theta < \epsilon$. Thus, we are in effect limiting $\theta$ to a region around
+$\frac{\pi}{2}$ when we select a value of $\epsilon$.
+
+<!--Let's define two vectors $x$ and
 $y$ as nearly orthogonal if the angle between them, $\theta$, is within $\epsilon$ of $\frac{\pi}{2}$.
 So we have
 
@@ -53,7 +65,7 @@ $$
 \frac{\left| x \cdot y \right|}{\Vert x \Vert \Vert y \Vert} < \epsilon.
 $$
 
-This is equivalent to saying that $x$ and $y$ are at most $\epsilon$ radians away[^1] from being orthogonal.
+This is equivalent to saying that $x$ and $y$ are at most $\epsilon$ radians away[^1] from being orthogonal.-->
 
 ## The proof
 I'll now prove that for any $\epsilon \in (0,1)$ and for any dimension $d$, there exists a set $A$
@@ -232,5 +244,5 @@ high dimensional spaces are.
 
 <br>
 
-[^1]: This approximation is incorrect for larger values of $\epsilon$ since we can't approximate
-$\cos \theta$ as $\frac{\pi}{2} -\theta$ in these cases.
+<!--[^1]: This approximation is incorrect for larger values of $\epsilon$ since we can't approximate
+$\cos \theta$ as $\frac{\pi}{2} -\theta$ in these cases.-->
