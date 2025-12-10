@@ -199,7 +199,7 @@ $$
 S_{d-1} = 2 \int_0^{\pi} \frac{2 \pi^{(d-1)/2}}{\Gamma\left(\frac{d-1}{2} \right)} \sin^{d-2} (\theta) d \theta.
 $$
 
-Combining these to get ratio of "blocked off" area w.r.t. total area, the value falls out nicely after
+Combining these to get the ratio of "blocked off" area w.r.t. total area, the value falls out nicely after
 eliminating common constants:
 
 $$
