@@ -34,7 +34,7 @@ $$
 $$
 
 for some small $\epsilon > 0$. Now if $\epsilon$ is small, we can approximate $\cos{\theta}$ as
-$-\theta$ near $\frac{\pi}{2}$. Thus we can say 
+$\frac{\pi}{2} -\theta$ near $\frac{\pi}{2}$. Thus we can say 
 
 $$
 \theta \in \left(\frac{\pi}{2} - \epsilon, \frac{\pi}{2} + \epsilon \right) \Longleftrightarrow
