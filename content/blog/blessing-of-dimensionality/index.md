@@ -20,7 +20,7 @@ still make sense.
 
 ## The naive view
 First, let me address the naive view expressed in my example. The largest set of pairwise
-orthogonal vectors in a $n$-dimensional space is indeed $n$, by definition of a basis in linear
+orthogonal vectors in a $d$-dimensional space is indeed $d$, by definition of a basis in linear
 algebra. Thus, we can have at most $d$ mutually orthogonal vectors
 in $\mathbb{R}^d$.
 
@@ -125,7 +125,7 @@ $$
 
 This is a big result! This means that for any given pair of $x_i, x_j$, the probability of them being
 nearly orthogonal is at least $1 - 2e^{-\epsilon^2 d / 6}$. But, we don't care about the probability
-of individual pairs of vectors being orthogonal; we care about about whether our entire set of $t$
+of individual pairs of vectors being orthogonal; we care about whether our entire set of $t$
 vectors are all pairwise nearly orthogonal. To get a bound on this, we can apply a union bound.
 
 $$
@@ -162,7 +162,7 @@ It's hard (at least for me) to develop intuition for reasoning in high dimension
 you can't easily visualize anything above $d=3$.
 
 One way to think about packing vectors into a $d$-dimensional space is to have each vector
-"block off" a portion of the space that other other vectors cannot occupy, without breaking the
+"block off" a portion of the space that other vectors cannot occupy, without breaking the
 "nearly orthogonal" principle. Again, let's restrict ourselves to the unit sphere, since magnitude
 doesn't matter for the purpose of cosine similarity.
 
@@ -200,7 +200,7 @@ S_{d-1} = 2 \int_0^{\pi} \frac{2 \pi^{(d-1)/2}}{\Gamma\left(\frac{d-1}{2} \right
 $$
 
 Combining these to get ratio of "blocked off" area w.r.t. total area, the value falls out nicely after
-eliminating commmon constants:
+eliminating common constants:
 
 $$
 R_{d} = \frac{C_{d-1}}{S_{d-1}}
@@ -233,4 +233,4 @@ high dimensional spaces are.
 <br>
 
 [^1]: This approximation is incorrect for larger values of $\epsilon$ since we can't approximate
-$\cos \theta$ as $-\theta$ in these cases.
+$\cos \theta$ as $\frac{\pi}{2} -\theta$ in these cases.
