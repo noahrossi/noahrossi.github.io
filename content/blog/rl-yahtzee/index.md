@@ -94,7 +94,7 @@ For next steps, I would like to try:
 ### Observability and debugging tools are important
 At one point, I had changed the observation space to dice counts but kept the action space using indices. This meant that choosing which dice to keep was essentially a shot in the dark each time, but the bug wasn't obvious to me at the time; I just saw the mean reward plateauing around 150 and assumed there was an issue with my model architecture or the training process.
 
-Since I was stuck, I finally decided to build a debugging tool that could show me probabilities of each action given an observation. Here's an example of what it would show for scoring:
+Since I was stuck, I finally decided to build a debugging tool that could show me probabilities of each action given an observation. Here's an example of what it showed:
 
 <img src="viz.png" alt="yahtzee model visualizer" width="100%"/>
 
