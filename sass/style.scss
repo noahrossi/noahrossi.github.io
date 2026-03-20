@@ -90,6 +90,13 @@ body {
     object-fit: cover;
   }
 
+  figcaption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: $spacing * 0.25;
+  }
+
   // Placeholder styling when no image
   .placeholder {
     width: 100%;
