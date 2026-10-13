@@ -1,27 +1,49 @@
 {% extends "base.html" %} {% block content %}
 <figure class="hero-image">
     <img src="/sunset.jpg" alt="Yahazudake Shrine on Yakushima island" />
-    <figcaption>Yahazudake Shrine, Yakushima island, Japan — October 2025</figcaption>
+    <figcaption>Yahazudake Shrine, Yakushima island, Japan (October 2025)</figcaption>
 </figure>
 
 <div class="content">
-    <p>Hi, I'm Noah. Some things about me:</p>
+    <p>
+        Hi, I'm Noah.
+    </p>
 
-    <ul>
+    <p>
+        I'm an AI safety researcher interested in reducing risk from powerful AI systems.
+        I participated in SPAR Spring 2026 under <a href="https://andyrdt.com">Andy Arditi</a>
+        and <a href="https://santiaranguri.com/">Santi Aranguri</a>.
+        Before that, I was a software engineer in quant trading working on distributed systems and research infra.
+    </p>
+
+    <p>
+        I'm also an avid hiker, sailor, and cyclist.
+        In summer 2025, I biked from Chicago to Iowa City
+        <a href="https://louminator.github.io/otherthings/">
+            with my father</a
+        >.
+    </p>
+
+    <p>
+        Shoot me an email to get in touch any time. There's a link in the footer.
+    </p>
+
+    {% set data = load_data(path="data/publications.toml") %}
+    {% if data.publications %}
+    <h2>Publications</h2>
+    <ul class="publications">
+        {% for pub in data.publications %}
         <li>
-            I'm interested in reducing AI risks.
+            <a href="{{ pub.url }}">{{ pub.title }}</a>
+            <div class="pub-authors">
+                {{ pub.authors | replace(from="Noah T. Rossi", to="<strong>Noah T. Rossi</strong>") | safe }}
+            </div>
+            <div class="pub-venue">
+                {{ pub.venue }}{% if pub.note %} · {{ pub.note }}{% endif %}
+            </div>
         </li>
-        <li>
-            I spent two years building cool stuff for trading at Jump Trading.
-        </li>
-        <li>I studied mathematics and computer science at Rice.</li>
-        <li>I'm an avid hiker, sailor, and cyclist.</li>
-        <li>
-            In summer 2025, I biked from Chicago to Iowa City
-            <a href="https://louminator.github.io/otherthings/">
-                with my father</a
-            >.
-        </li>
+        {% endfor %}
     </ul>
+    {% endif %}
 </div>
 {% endblock content %}

@@ -1,0 +1,10 @@
+# Publications shown on the home page, newest first.
+# `authors` is plain text; "Noah T. Rossi" is bolded automatically.
+# `note` is optional (e.g. "Forthcoming", "Spotlight").
+
+[[publications]]
+title = "LLM Judges Punish Verbalized Evaluation Awareness"
+authors = "Noah T. Rossi*, Ryan Lundqvist*, Santiago Aranguri"
+venue = "JUDGe Workshop @ NeurIPS 2026"
+note = "Oral (top 5%)"
+url = "https://openreview.net/forum?id=5t0DtOrYIb"

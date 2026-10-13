@@ -142,6 +142,32 @@ body {
       text-decoration: underline;
     }
   }
+
+  h2 {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    margin: $spacing 0 1rem;
+  }
+
+  ul.publications {
+    list-style: none;
+    margin-left: 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    .pub-authors,
+    .pub-venue {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: $color-text-light;
+    }
+
+    .pub-venue {
+      font-style: italic;
+    }
+  }
 }
 
 // Footer
