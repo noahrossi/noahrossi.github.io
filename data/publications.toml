@@ -3,6 +3,12 @@
 # `note` is optional (e.g. "Forthcoming", "Spotlight").
 
 [[publications]]
+title = "Discovering Jailbreaks via Curriculum of Models"
+authors = "Michał Burzyński*, Noah T. Rossi*, Shomit Basu, Andy Arditi"
+venue = "arXiv preprint, 2026"
+url = "https://arxiv.org/abs/2610.38833"
+
+[[publications]]
 title = "LLM Judges Punish Verbalized Evaluation Awareness"
 authors = "Noah T. Rossi*, Ryan Lundqvist*, Santiago Aranguri"
 venue = "JUDGe Workshop @ NeurIPS 2026"
